@@ -1,0 +1,87 @@
+<!-- home.html - Home Page (Main Navigation Hub) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>QuickBite - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="home.html"><i class="bi bi-bag-check"></i> QuickBite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container my-4">
+    <div class="row g-4">
+      <div class="col-12 text-center mb-3">
+        <h1 class="display-5 fw-bold">Welcome to QuickBite 🍔</h1>
+        <p class="lead">Fast, fresh, and delicious food delivered to your cravings!</p>
+      </div>
+      
+      <!-- Navigation Cards -->
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 card-hover">
+          <i class="bi bi-images fs-1 text-primary"></i>
+          <h3 class="mt-3">Gallery</h3>
+          <p class="text-muted">Explore our mouth-watering food gallery with interactive carousel.</p>
+          <a href="gallery.html" class="btn btn-outline-primary rounded-pill mt-2">View Gallery →</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 card-hover">
+          <i class="bi bi-cart-plus fs-1 text-success"></i>
+          <h3 class="mt-3">Place Order</h3>
+          <p class="text-muted">Select your favorite meal, quantity, and confirm instantly.</p>
+          <a href="order.html" class="btn btn-outline-success rounded-pill mt-2">Order Now →</a>
+        </div>
+      </div>
+
+      <!-- Phone Integration Section (Call, Email, SMS, WhatsApp) -->
+      <div class="col-12 mt-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+          <h4 class="fw-bold mb-3"><i class="bi bi-phone-vibrate"></i> Connect With Us</h4>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="tel:+60123456789" class="btn btn-success btn-phone"><i class="bi bi-telephone-fill"></i> Call Us</a>
+            <a href="mailto:quickbite@example.com?subject=Food%20Order%20Inquiry" class="btn btn-danger btn-phone"><i class="bi bi-envelope-fill"></i> Email</a>
+            <a href="sms:+60123456789?body=Hi%20QuickBite%2C%20I'd%20like%20to%20order%20food" class="btn btn-info btn-phone text-white"><i class="bi bi-chat-dots-fill"></i> SMS</a>
+            <a href="https://wa.me/60123456789?text=I'd%20like%20to%20order%20from%20QuickBite" target="_blank" class="btn btn-dark btn-phone"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick info list -->
+      <div class="col-12 mt-2 mb-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+          <h5><i class="bi bi-star-fill text-warning"></i> Why QuickBite?</h5>
+          <ul class="list-group list-group-flush bg-transparent">
+            <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success me-2"></i> 30-min delivery</li>
+            <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success me-2"></i> Fresh ingredients</li>
+            <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success me-2"></i> Exclusive discounts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

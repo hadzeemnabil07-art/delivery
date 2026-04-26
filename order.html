@@ -1,0 +1,101 @@
+<!-- order.html - Order Page with Form Validation & Modal Confirmation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>QuickBite - Place Order</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="home.html"><i class="bi bi-bag-check"></i> QuickBite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4 py-2">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-7">
+        <div class="card border-0 shadow-lg rounded-4 p-3 p-md-4">
+          <div class="card-body">
+            <h2 class="card-title text-center fw-bold mb-3"><i class="bi bi-cart-check-fill text-warning"></i> Quick Order</h2>
+            <p class="text-center text-muted">Fill in your details and choose your meal</p>
+            <hr>
+            <form id="orderForm">
+              <div class="mb-3">
+                <label for="customerName" class="form-label fw-semibold">Full Name *</label>
+                <input type="text" class="form-control form-control-lg" id="customerName" placeholder="e.g., Ahmad Faiz">
+              </div>
+              
+              <div class="mb-3">
+                <label for="foodItem" class="form-label fw-semibold">Select Food *</label>
+                <select class="form-select form-select-lg" id="foodItem">
+                  <option value="" disabled selected>-- Choose your meal --</option>
+                  <option value="Classic Cheeseburger">🍔 Classic Cheeseburger - RM15.90</option>
+                  <option value="Pepperoni Pizza">🍕 Pepperoni Pizza - RM28.90</option>
+                  <option value="Crispy Chicken Burger">🍗 Crispy Chicken Burger - RM13.90</option>
+                  <option value="Loaded Cheese Fries">🍟 Loaded Cheese Fries - RM9.90</option>
+                </select>
+              </div>
+              
+              <div class="mb-4">
+                <label for="quantity" class="form-label fw-semibold">Quantity *</label>
+                <input type="number" class="form-control form-control-lg" id="quantity" min="1" value="1" placeholder="Number of servings">
+              </div>
+              
+              <button type="submit" class="btn btn-warning w-100 btn-lg fw-bold rounded-pill">Place Order</button>
+            </form>
+            
+            <!-- Phone Integration Section inside order page -->
+            <div class="mt-5 pt-3">
+              <h6 class="fw-bold"><i class="bi bi-headset"></i> Need help? Reach us:</h6>
+              <div class="d-flex flex-wrap gap-2 justify-content-between">
+                <a href="tel:+60123456789" class="btn btn-sm btn-outline-success rounded-pill btn-outline-phone"><i class="bi bi-telephone"></i> Call</a>
+                <a href="mailto:quickbite@example.com" class="btn btn-sm btn-outline-danger rounded-pill btn-outline-phone"><i class="bi bi-envelope"></i> Email</a>
+                <a href="sms:+60123456789" class="btn btn-sm btn-outline-info rounded-pill btn-outline-phone"><i class="bi bi-chat"></i> SMS</a>
+                <a href="https://wa.me/60123456789" target="_blank" class="btn btn-sm btn-outline-dark rounded-pill btn-outline-phone"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Modal for Order Confirmation -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title fw-bold" id="orderModalLabel"><i class="bi bi-check-circle-fill"></i> Order Confirmed!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalMessage">
+          Your order details will appear here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

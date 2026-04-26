@@ -1,0 +1,182 @@
+/* style.css - Complete Styles for QuickBite Mobile Web Application */
+
+/* ========== GLOBAL STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fef9e8;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  padding-bottom: 20px;
+}
+
+/* Login page specific background */
+body.login-page {
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff3e0 100%);
+}
+
+/* ========== CARD STYLES ========== */
+.card-shadow {
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.rounded-4 {
+  border-radius: 1.25rem !important;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== BUTTON STYLES ========== */
+.btn-phone {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-phone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-phone {
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-phone:hover {
+  transform: translateY(-2px);
+}
+
+.btn-warning-custom {
+  background: #ff9f00;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-warning-custom:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+/* ========== NAVIGATION BAR ========== */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+  color: #ff9f00 !important;
+  border-bottom: 2px solid #ff9f00;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #ff9f00 !important;
+}
+
+/* ========== CAROUSEL STYLES ========== */
+.carousel-img {
+  object-fit: cover;
+  height: 280px;
+  background: #f1f1f1;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  bottom: 12px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+/* ========== FORM STYLES ========== */
+.form-control:focus,
+.form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+/* ========== LIST GROUP STYLES ========== */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  background: transparent;
+}
+
+/* ========== RESPONSIVE DESIGN (MOBILE-FRIENDLY) ========== */
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 200px;
+  }
+  
+  .btn-phone {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .display-5 {
+    font-size: 1.8rem;
+  }
+  
+  h1, h2, .h1, .h2 {
+    font-size: 1.6rem;
+  }
+  
+  .card .btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ========== UTILITY CLASSES ========== */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.text-warning-custom {
+  color: #ff9f00;
+}
+
+.bg-warning-custom {
+  background: #ff9f00;
+}
+
+/* Modal customization */
+.modal-content {
+  border: none;
+}
+
+.modal-header.bg-warning {
+  background: #ff9f00 !important;
+}
+
+/* Footer / spacing */
+footer {
+  margin-top: 2rem;
+}

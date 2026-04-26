@@ -1,0 +1,101 @@
+<!-- gallery.html - Gallery Page with Bootstrap Carousel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>QuickBite - Food Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="home.html"><i class="bi bi-bag-check"></i> QuickBite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <h2 class="text-center mb-4 fw-bold">🍕 Our Delicious Menu Gallery</h2>
+    <p class="text-center text-muted">Swipe to explore our signature dishes</p>
+
+    <!-- Bootstrap Carousel (Interactive) -->
+    <div id="foodCarousel" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=400&fit=crop" class="d-block w-100 carousel-img" alt="Classic Cheeseburger">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+            <h5>🔥 Classic Cheeseburger</h5>
+            <p>Juicy beef patty, melted cheese, fresh lettuce</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&h=400&fit=crop" class="d-block w-100 carousel-img" alt="Pepperoni Pizza">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+            <h5>🍕 Pepperoni Pizza</h5>
+            <p>Loaded with pepperoni, mozzarella, and secret sauce</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=400&fit=crop" class="d-block w-100 carousel-img" alt="Chicken Burger">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+            <h5>🍗 Crispy Chicken Burger</h5>
+            <p>Crunchy chicken fillet with special sauce</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=400&fit=crop" class="d-block w-100 carousel-img" alt="Loaded Fries">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
+            <h5>🍟 Loaded Cheese Fries</h5>
+            <p>Crispy fries topped with cheese and herbs</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Additional food description list -->
+    <div class="row mt-5 g-3">
+      <div class="col-12">
+        <div class="card border-0 shadow-sm p-3 rounded-4">
+          <h5><i class="bi bi-info-circle"></i> Today's Specials</h5>
+          <ul class="list-group list-group-flush bg-transparent">
+            <li class="list-group-item bg-transparent">🍔 Cheeseburger Combo - RM18.90</li>
+            <li class="list-group-item bg-transparent">🍕 Pepperoni Pizza (Large) - RM32.90</li>
+            <li class="list-group-item bg-transparent">🍗 Chicken Burger + Fries - RM15.90</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
